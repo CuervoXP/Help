@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+$Cinzel:'Cinzel', serif;
+$Yeselva: 'Yeseva One', cursive;
+$Open-Sans: 'Open Sans', sans-serif;
+
+// INDEX.HTML
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.993);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.308);
+    .contenedor-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .Logo {
+            margin: 10px 0 0 6rem;
+            img {
+                padding-top: 5px;
+                width: 290px;
+                height: 61.35px;
+            }
+        }
+        .logo-carrito {
+            width: 2.2rem;
+            height: 2.2rem;
+            margin: 25px 5rem 0 0;
+        }
+        .navegación {
+            ul {
+                li {
+                    margin: 30px 12px 0 12px;
+                    padding-top: 3px;
+                    display: inline-block;
+                    a:hover {
+                        color: rgb(255, 123, 0);
+                        transition: all 0.5s;
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+.novedades-titulo {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+    p {
+        color: rgb(0, 0, 0);
+    }
+}
+.contenedor-cards {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+        margin: 2rem 2.5rem 0rem 2.5rem;
+        text-align: center;
+        width: 300px;
+        height: 440px;
+        img {
+            width: 100%;
+            height: 300px;
+
+        }
+        .titulo-calza {
+            margin: 10px 0px 10px 0px;
+            font-size: 1.2rem;
+        }
+        .card__precio-novedades {
+            font-family: $Open-Sans;
+            font-size: 1.1rem;
+            padding-bottom: 10px;
+        }
+        .boton-comprar {
+            
+            background-color: black;
+            border: black;
+            padding: 10px;
+            color:white;
+            width: 7rem;
+        }
+    }
+    .card:hover {
+        transition: all 0.5s linear;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315);
+    }
+}
+#main-container {
+    margin: 150px auto;
+    width: 80%;
+    table {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        border-collapse: collapse;
+        th{
+            padding: 20px;
+        }
+        td {
+            
+            padding: 20px;
+        }
+        thead {
+            background-color: rgba(0, 0, 0, 0.226);
+            border-bottom: solid 5px black;
+        }
+        tr:nth-child(even){
+            background-color: #ddd;
+        }
+        tr {
+            #boton-sumar {
+                font-size: 1.5rem;
+                width: 4rem;
+                margin-right: 5px;
+                background-color: rgb(30, 184, 30);
+            }
+            #boton-restar {
+                font-size: 1.5rem;
+                width: 4rem;
+                margin-left: 5px;
+                background-color: rgb(255, 46, 46);
+        }
+    }
+    }
+}
+header {
+    width: 100%;
+}
+
+.header-contenedor {
+    height: 595px;
+    margin: 4.7rem 0 0 0;
+    background-image: url(../img/portada1.svg);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    .header-contenedor__texto {
+        padding: 10.65rem 0rem 0rem 7.58rem;
+        h4 {
+            font-family: $Yeselva;
+            font-size: 4.438rem;
+        }
+        h5 {
+            padding-top: 1rem;
+            font-family: $Yeselva;
+            font-size: 3.012rem;
+        }
+        p {
+            padding-top: 2.5rem;
+            font-family: $Open-Sans;
+            font-size: 2.9rem;
+        }
+    }
+}

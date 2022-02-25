@@ -1,0 +1,136 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.993);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.308); }
+  .nav .contenedor-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .nav .contenedor-nav .Logo {
+      margin: 10px 0 0 6rem; }
+      .nav .contenedor-nav .Logo img {
+        padding-top: 5px;
+        width: 290px;
+        height: 61.35px; }
+    .nav .contenedor-nav .logo-carrito {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin: 25px 5rem 0 0; }
+    .nav .contenedor-nav .navegación ul li {
+      margin: 30px 12px 0 12px;
+      padding-top: 3px;
+      display: inline-block; }
+      .nav .contenedor-nav .navegación ul li a:hover {
+        color: #ff7b00;
+        transition: all 0.5s; }
+
+.novedades-titulo {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 500; }
+  .novedades-titulo p {
+    color: black; }
+
+.contenedor-cards {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .contenedor-cards .card {
+    margin: 2rem 2.5rem 0rem 2.5rem;
+    text-align: center;
+    width: 300px;
+    height: 440px; }
+    .contenedor-cards .card img {
+      width: 100%;
+      height: 300px; }
+    .contenedor-cards .card .titulo-calza {
+      margin: 10px 0px 10px 0px;
+      font-size: 1.2rem; }
+    .contenedor-cards .card .card__precio-novedades {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      padding-bottom: 10px; }
+    .contenedor-cards .card .boton-comprar {
+      background-color: black;
+      border: black;
+      padding: 10px;
+      color: white;
+      width: 7rem; }
+  .contenedor-cards .card:hover {
+    transition: all 0.5s linear;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315); }
+
+#main-container {
+  margin: 150px auto;
+  width: 80%; }
+  #main-container table {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse; }
+    #main-container table th {
+      padding: 20px; }
+    #main-container table td {
+      padding: 20px; }
+    #main-container table thead {
+      background-color: rgba(0, 0, 0, 0.226);
+      border-bottom: solid 5px black; }
+    #main-container table tr:nth-child(even) {
+      background-color: #ddd; }
+    #main-container table tr #boton-sumar {
+      font-size: 1.5rem;
+      width: 4rem;
+      margin-right: 5px;
+      background-color: #1eb81e; }
+    #main-container table tr #boton-restar {
+      font-size: 1.5rem;
+      width: 4rem;
+      margin-left: 5px;
+      background-color: #ff2e2e; }
+
+header {
+  width: 100%; }
+
+.header-contenedor {
+  height: 595px;
+  margin: 4.7rem 0 0 0;
+  background-image: url(../img/portada1.svg);
+  background-size: cover;
+  color: white; }
+  .header-contenedor .header-contenedor__texto {
+    padding: 10.65rem 0rem 0rem 7.58rem; }
+    .header-contenedor .header-contenedor__texto h4 {
+      font-family: "Yeseva One", cursive;
+      font-size: 4.438rem; }
+    .header-contenedor .header-contenedor__texto h5 {
+      padding-top: 1rem;
+      font-family: "Yeseva One", cursive;
+      font-size: 3.012rem; }
+    .header-contenedor .header-contenedor__texto p {
+      padding-top: 2.5rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 2.9rem; }
+
+/*# sourceMappingURL=estilos.css.map */
