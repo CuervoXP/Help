@@ -1,25 +1,34 @@
-const carritoProductos = JSON.parse(localStorage.getItem('carritoDeCompras')); // Obtengo el carrito en objeto
-const contenedorCarrito = document.querySelector('.contenedor-principal'); // selecciono el div en el que pondre la tabla de productos
+const obtenerProductosLocalStorage = () => {
+    let productosLS;
 
-console.log(carritoProductos);
+    if(localStorage.getItem('carrito') === null) {
+        productosLS = [];
+    } else {
+        productosLS = JSON.parse(localStorage.getItem('carrito'));
+    }
+    return productosLS
+} // Obtengo el carrito en objeto
+const contenedorCarrito = document.querySelector('.contenedor-principal'); // selecciono el div en el que pondre la tabla de productos
 document.addEventListener('DOMContentLoaded', () => {
     mostrarCarrito2();
-    console.log(carrito);
 })
 
 const mostrarCarrito2 = () => {
-    const carritoRow = document.createElement('div'); 
-    // Aca esta mi duda, no se como mostrar la tabla del index.html otra vez en carrito.html. Intenté de este modo pero la verdad no se como entrar al nombre, a la cantidad, al precio del producto...
-    const carritoContent = `<tr>
+    let productosLS;
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(producto => {
+        const row = document.createElement('div');
+        row.innerHTML = `<tr>
             
-        <td>${carritoProductos.carrito}</td>
-        <td>${carritoProductos.carrito}</td>
+        <td>${producto.nombre}</td>
+        <td>${producto.cantidad}</td>
         <td>
             <button id="boton-sumar" class="sumar">+</button><button id="boton-restar" class="restar">-</button>
         </td>
-        <td>${carritoProductos.carrito}</td>
+        <td>${producto.total}</td>
     </tr>`
+    contenedorCarrito.appendChild(row);
+    });
 
-    carritoRow.innerHTML = carritoContent;
-    contenedorCarrito.appendChild(carritoRow);
+    
 }
