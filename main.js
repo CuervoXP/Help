@@ -74,7 +74,7 @@ const setearCarrito = objeto => {
     }
     carrito[producto.id] = {...producto} // El id del producto va a contener la información de todo el producto "..."
     mostrarCarrito() // para ver los cambios, debo mostrar el carrito, asi que accedo a la funcio mostrarCarrito()
-
+    // console.log(producto)
 }
 
 const mostrarCarrito = () => {
