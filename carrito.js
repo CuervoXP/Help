@@ -1,7 +1,9 @@
 // Obtengo el carrito en objeto
 const contenedorCarrito = document.querySelector('#items2'); // selecciono el div en el que pondre la tabla de productos
 const footer2 = document.querySelector('#footer2');
+
 let json = JSON.parse(localStorage.getItem("carritoDeCompras"));
+
 const templateFooter2 = document.querySelector('#template-footer2');
 
 
@@ -10,7 +12,7 @@ const templateFooter2 = document.querySelector('#template-footer2');
 document.addEventListener('DOMContentLoaded', () => {
 
     contenedorCarrito.innerHTML = '';
-        
+
     mostrarCarrito2()
 })
 
@@ -25,7 +27,7 @@ const mostrarCarrito2 = () => {
             <td>
                 <button id="boton-sumar" class="sumar">+</button><button id="boton-restar" class="restar">-</button>
             </td>
-            <td>${producto.precio}</td>
+            <td>${producto.cantidad * producto.precio}</td>
             </tr>`
             
         })
@@ -35,15 +37,15 @@ const mostrarCarrito2 = () => {
 
 
 
-let carrito2 = JSON.parse(localStorage.getItem('carritoDeCompras'));
+
 
 const mostrarFooter2 = () => {
         
             footer2.innerHTML = ''
-            const productosTotal = Object.values(carrito2).reduce((cantidadOld, producto) => {
+            const productosTotal = Object.values(json).reduce((cantidadOld, producto) => {
                 return cantidadOld + producto.cantidad;
             },0 )
-            const precioTotal = Object.values(carrito2).reduce((precioOld, producto) => {
+            const precioTotal = Object.values(json).reduce((precioOld, producto) => {
                 return precioOld + producto.precio * producto.cantidad;
             },0)
             
@@ -58,10 +60,15 @@ const mostrarFooter2 = () => {
             
 
             const vaciarCarrito = document.getElementById('vaciar-carrito2');
-            vaciarCarrito.addEventListener('click', () => {
-                carrito2 = {};
-                mostrarCarrito2();
-            })
+            
+                vaciarCarrito.addEventListener('click', () => {
+                    json = {};
+                    json = localStorage.setItem('carritoDeCompras', JSON.stringify(json));
+                    mostrarCarrito2();
+                    // contenedorCarrito.innerHTML = '';
+                })
+            
+            
 
             if(Object.values(json).length === 0) {
                 footer2.innerHTML = `<th>Carrito vacío :(</th>`
