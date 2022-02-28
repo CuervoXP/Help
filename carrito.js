@@ -1,8 +1,13 @@
 // Obtengo el carrito en objeto
 const contenedorCarrito = document.querySelector('#items2'); // selecciono el div en el que pondre la tabla de productos
-const footer2 = document.querySelector('#footer2')
+const footer2 = document.querySelector('#footer2');
 const json = JSON.parse(localStorage.getItem("carritoDeCompras"));
-const templateFooter2 = document.querySelector('template-footer2')
+const templateFooter2 = document.querySelector('#template-footer2');
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     
@@ -19,13 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </td>
         <td>${producto.precio}</td>
         </tr>`
-        // mostrarFooter2();
+        
     }
     mostrarCarrito2();
+    mostrarFooter2();
 })
 
 })
-/*const mostrarFooter2 = () => {
+const mostrarFooter2 = () => {
     footer2.innerHTML = ''
     const productosTotal = Object.values(json).reduce((cantidadOld, producto) => {
         return cantidadOld + producto.cantidad;
@@ -44,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const vaciarCarrito = document.getElementById('vaciar-carrito2');
     vaciarCarrito.addEventListener('click', () => {
-        carrito = {} // :)
+        json = {} // :)
         mostrarCarrito2();
     })
 
-    if(Object.values(carrito).length === 0) {
+    if(Object.values(json).length === 0) {
         footer.innerHTML = `<th>Carrito vacío :(</th>`
     }
-}*/
+}
 
 
