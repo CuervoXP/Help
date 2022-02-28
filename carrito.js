@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
     mostrarCarrito2();
-    mostrarFooter2();
+    // mostrarFooter2();
 })
 
 })
-const mostrarFooter2 = () => {
+/*const mostrarFooter2 = () => {
     footer2.innerHTML = ''
     const productosTotal = Object.values(json).reduce((cantidadOld, producto) => {
         return cantidadOld + producto.cantidad;
@@ -57,6 +57,6 @@ const mostrarFooter2 = () => {
     if(Object.values(json).length === 0) {
         footer.innerHTML = `<th>Carrito vacío :(</th>`
     }
-}
+}*/
 
 
